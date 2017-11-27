@@ -1,0 +1,38 @@
+.container {
+  height: 100%;
+} 
+
+.menu{
+    height:10%;
+    display:flex;
+    background-color:green;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loading{
+    height: 90%;
+    display:flex;
+    background-color: palevioletred;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{
+    height: 90%;
+}
+
+.item{
+    height:300rpx;
+    display: flex 
+}
+
+.item view{
+    display: flex;
+    flex-direction:column;
+}
+
+.item image{
+    height:300rpx;
+    width: 150rpx;
+} 

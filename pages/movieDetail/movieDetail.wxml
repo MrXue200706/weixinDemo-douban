@@ -1,0 +1,14 @@
+<view class="container">
+    <view wx:if="{{isLoading}}" class="loading">
+        <image style="width: 100px; height: 100px;" src="/images/loading.gif"></image>
+    </view>
+    <scroll-view class="list" wx:else scroll-y="true">
+        <view class="image">
+            <image src="{{movieDetailData.images.large}}"></image>
+        </view>
+        <view class="description">
+            <text>{{movieDetailData.title}}</text>
+            <text>{{movieDetailData.summary}}</text>
+        </view>
+   </scroll-view>
+</view>

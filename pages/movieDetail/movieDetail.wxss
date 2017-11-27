@@ -1,0 +1,33 @@
+.container {
+  height: 100%;
+}
+
+.loading{
+    height: 100%;
+    display:flex;
+    background-color: palevioletred;
+    justify-content: center;
+    align-items: center;
+}
+
+.list{
+    height: 100%;
+}
+
+.list .image{
+    height: 500rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list image{
+    height: 450rpx;
+    width: 350rpx;
+}
+
+.list .description{
+    display: flex;
+    flex-direction: column;
+}
+

@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="menu">
+        <text data-movie-type="in_theaters" bindtap="changeMovieType">正在热映</text>
+        <text data-movie-type="coming_soon"  bindtap="changeMovieType">即将上映</text>
+        <text data-movie-type="top250"  bindtap="changeMovieType">top250</text>
+    </view>
+    <view wx:if="{{isLoading}}" class="loading">
+        <image style="width: 100px; height: 100px;" src="/images/loading.gif"></image>
+    </view>
+    <scroll-view class="list" wx:else scroll-y="true" bindscrolltolower="getMoreData">
+
+        <navigator url="../movieDetail/movieDetail?id={{item.id}}"
+                   hover-class="navigator-hover"
+                   class="item"
+                   wx:for="{{movieListData}}"
+                   wx:key="{{item.id}}"
+        >
+            <image src="{{item.images.small}}"></image>
+            <view>
+                <text>{{item.title}}</text>
+                <text>{{item.year}}</text>
+            </view>
+        </navigator>
+        <view wx:if="{{isBottom}}">
+            <text>正在请求数据,请稍等...</text>
+        </view>
+   </scroll-view>
+</view>
